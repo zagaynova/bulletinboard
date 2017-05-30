@@ -1,0 +1,26 @@
+html
+	head
+		link(rel="stylesheet", href="./stylesheets/style.css")
+		title Show	
+	body
+		div
+			nav.navbar.navbar-inverse(role='navigation', style='padding-left:130px;')
+				ul.nav.navbar-nav
+					li 
+						a(href='route1') New Post
+					li.active
+						a(href='route2') All Posts
+
+		.container
+			.row
+				.col-xs-6.offset-xs-3
+					h1.text-xs-center Bulletin Board Messages
+					hr
+					table
+						tr
+							td Subject
+							td Message
+						tr
+							each message in messages
+								td= message.title
+								td= message.body
