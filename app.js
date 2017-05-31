@@ -4,7 +4,7 @@ const pug = require('pug');
 // const router = express.Router();
 // const path = require('path');
 
-var go = 000060;
+var go = 000000060;
 const app = express()
 
 
@@ -32,8 +32,8 @@ app.get('/', (req, res) => {
 	});
 })
 
-//nieuwe route
+//write router
 
-const listener = app.listen(8080, () => {
+const listener = app.listen(80, () => {
     console.log('server has started at ', listener.address().port)
 });
