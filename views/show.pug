@@ -1,26 +1,31 @@
 html
 	head
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+		style.
+			table td { padding: 7px; }
+
 		title Show	
 	body
 		div
 			nav.navbar.navbar-inverse(role='navigation', style='padding-left:130px;')
 				ul.nav.navbar-nav
 					li 
-						a(href='route1') New Post
+						a(href='./newmessage') New Message
 					li.active
-						a(href='route2') All Posts
+						a(href='./') All Messages
 
 		.container
 			.row
-				.col-xs-6.offset-xs-3
+				.col-xs-9.offset-xs-3
 					h1.text-xs-center Bulletin Board Messages
 					hr
 					table
 						tr
-							td Subject		
-							td Message
-						tr
-							each message in messages
+							td
+								b Subject		
+							td
+								b Message
+						each message in messages
+							tr
 								td= message.title
 								td= message.body
