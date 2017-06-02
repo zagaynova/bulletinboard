@@ -21,7 +21,7 @@ function addMessage (title, body) {
 function deleteMessage () {
 	pg.connect(connectionString, function(err, client, done) {
 		var deleteQuery;
-		//deleteQuery = "delete from messages where title = 'iets'";
+		deleteQuery = "delete from messages where title = 'Missing'";
 		client.query(deleteQuery, function(err, result) {
 	    	done();
 	    	pg.end();

@@ -19,9 +19,9 @@ html
 					form(action='./addmessage', method='post')
 						.form-group
 							label Title:
-								input(type="text" name='title' placeholder="Short summary" class="form-control")
+								input(type="text" name="title" placeholder="Short summary" class="form-control")
 						.form-group
 							label Message:
-								input(type="text" name="body" placeholder="Just start, go for it!" class="form-control")
+								textarea(type="text" name="body" placeholder="Type a message" autocomplete="off" class="form-control" rows="5")
 						.form-group
 							button(type="submit" class="btn btn-success btn-lg btn-") Submit
